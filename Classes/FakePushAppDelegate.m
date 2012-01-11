@@ -27,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-	[[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
+	[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
 //	[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackOpaque;
 
     // Add the view controller's view to the window and display.
