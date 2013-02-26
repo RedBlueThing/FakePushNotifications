@@ -16,9 +16,9 @@
 - (IBAction)onSchedule:(id)sender
 {
 	// schedule a push notification in 5 seconds
-    UILocalNotification *localNotif = [[[UILocalNotification alloc] init] autorelease];
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
 	
-	NSMutableDictionary * userInfo = [[[NSMutableDictionary alloc] init]autorelease];
+	NSMutableDictionary * userInfo = [[NSMutableDictionary alloc] init];
 	[userInfo setObject:pushMessage.text forKey:@"alert"];
 	
 	localNotif.userInfo = (NSDictionary*)userInfo;
@@ -37,8 +37,8 @@
 - (IBAction)onShowimage:(id)sender
 {
 	// how a full screen image
-	FakeImageBackground * imageController = [[FakeImageBackground new] autorelease];
-	[self presentModalViewController:imageController animated:YES];
+	FakeImageBackground * imageController = [FakeImageBackground new];
+    [self presentViewController:imageController animated:YES completion:NULL];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -56,7 +56,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-	pushMessage.text = [[userDefaults stringForKey:@"msg"] retain];
+	pushMessage.text = [userDefaults stringForKey:@"msg"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -69,9 +69,5 @@
 }
 
 
-- (void)dealloc {
-	[pushMessage release];
-    [super dealloc];
-}
 
 @end
