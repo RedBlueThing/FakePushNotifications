@@ -38,7 +38,7 @@
 {
 	// how a full screen image
 	FakeImageBackground * imageController = [[FakeImageBackground new] autorelease];
-	[self presentModalViewController:imageController animated:YES];
+    [self presentViewController:imageController animated:YES completion:NULL];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

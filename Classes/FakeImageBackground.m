@@ -23,7 +23,7 @@
 
 - (IBAction)onTap:(id)sender
 {
-	[self.parentViewController dismissModalViewControllerAnimated:YES];	
+    [self.parentViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning {
