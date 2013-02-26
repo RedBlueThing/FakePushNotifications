@@ -12,7 +12,7 @@
 	IBOutlet UITextView * pushMessage;
 }
 
-@property (retain, nonatomic) UITextView * pushMessage;
+@property (strong, nonatomic) UITextView * pushMessage;
 
 - (IBAction)onSchedule:(id)sender;
 - (IBAction)onShowimage:(id)sender;

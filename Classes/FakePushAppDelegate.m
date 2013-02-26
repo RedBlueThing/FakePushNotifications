@@ -41,11 +41,11 @@
 {
 	NSDictionary* aps = [notification userInfo];
 	NSString* text = [aps objectForKey:@"alert"];
-	UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:[self infoValueForKey:@"CFBundleDisplayName"]
+	UIAlertView* alert = [[UIAlertView alloc] initWithTitle:[self infoValueForKey:@"CFBundleDisplayName"]
 													 message:text
 													delegate:self
 										   cancelButtonTitle:@"Close"
-										   otherButtonTitles:@"View", nil] autorelease];
+										   otherButtonTitles:@"View", nil];
 	[alert show];	
 }
 
@@ -101,11 +101,6 @@
 }
 
 
-- (void)dealloc {
-    [viewController release];
-    [window release];
-    [super dealloc];
-}
 
 
 @end
