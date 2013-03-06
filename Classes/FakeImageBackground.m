@@ -23,7 +23,7 @@
 
 - (IBAction)onTap:(id)sender
 {
-	[self.parentViewController dismissModalViewControllerAnimated:YES];	
+    [self.parentViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,10 +40,6 @@
 }
 
 
-- (void)dealloc {
-	[backgroundImage release];
-    [super dealloc];
-}
 
 
 @end

@@ -13,7 +13,7 @@
 	IBOutlet UIImageView * backgroundImage;
 }
 
-@property (nonatomic,retain) UIImageView * backgroundImage;
+@property (nonatomic,strong) UIImageView * backgroundImage;
 
 - (IBAction)onTap:(id)sender;
 
